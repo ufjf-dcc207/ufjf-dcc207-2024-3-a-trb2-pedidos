@@ -33,6 +33,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: purple;
+}
+
+h2{
+  color: purple;
 }
 
 button {
@@ -47,7 +52,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: purple;
 }
 button:focus,
 button:focus-visible {
@@ -60,7 +65,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: purple;
   }
   button {
     background-color: #f9f9f9;

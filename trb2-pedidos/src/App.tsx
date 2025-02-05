@@ -6,8 +6,6 @@ function App() {
   return (
     <>
       <Pedido/>
-      <button>Adicionar pedido</button>
-      <button>Atender pedido</button>
     </>
   );
 }
