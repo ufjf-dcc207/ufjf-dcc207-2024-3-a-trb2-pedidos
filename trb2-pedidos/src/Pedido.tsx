@@ -12,14 +12,16 @@ export default function Pedido(){
     const [contador, setContador] = useState(1);
 
     const adicionarPedido = ()=>{
-        const novoPedido: Pedido = {
-            id: contador,
-            nome:nome,
-            atendido: false
-        };
-        setPedidos([...pedidos,novoPedido]);
-        setNome("");
-        setContador(contador+1);
+        if(nome!=""){
+            const novoPedido: Pedido = {
+                id: contador,
+                nome:nome,
+                atendido: false
+            };
+            setPedidos([...pedidos,novoPedido]);
+            setNome("");
+            setContador(contador+1);
+        }
     };
 
     const atenderPedido = ()=>{
@@ -27,6 +29,8 @@ export default function Pedido(){
             const [pedidoAtendido, ...pedidosFila] = pedidos;
             pedidoAtendido.atendido = true;
             setPedidos(pedidosFila);
+
+            if(pedidosFila.length===0) setContador(1);
         }
     };
 
