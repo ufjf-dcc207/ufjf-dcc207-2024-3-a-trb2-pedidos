@@ -1,0 +1,7 @@
+.pedido-item{
+    display: grid;
+    justify-items: stretch;
+    border: 1 px solid purple;
+    padding: 0.2em;
+    gap: 0.1em;
+}
