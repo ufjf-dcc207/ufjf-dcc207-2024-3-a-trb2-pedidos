@@ -1,25 +1,27 @@
 import { useState } from "react";
+import './Pedido.css';
 
 type Pedido ={
     id: number;
-    nome: string;
+    produto: string;
     atendido: boolean;
 };
 
 export default function Pedido(){
     const [pedidos,setPedidos] = useState<Pedido[]>([]);
-    const [nome,setNome] = useState("");
+    const [pedidosAtendidos,setPedidosAtendidos] = useState<Pedido[]>([]);
+    const [produto,setProduto] = useState("");
     const [contador, setContador] = useState(1);
 
     const adicionarPedido = ()=>{
-        if(nome!=""){
+        if(produto!=""){
             const novoPedido: Pedido = {
                 id: contador,
-                nome:nome,
+                produto:produto,
                 atendido: false
             };
             setPedidos([...pedidos,novoPedido]);
-            setNome("");
+            setProduto("");
             setContador(contador+1);
         }
     };
@@ -28,31 +30,49 @@ export default function Pedido(){
         if(pedidos.length>0){
             const [pedidoAtendido, ...pedidosFila] = pedidos;
             pedidoAtendido.atendido = true;
+            setPedidosAtendidos([...pedidosAtendidos,pedidoAtendido]);
             setPedidos(pedidosFila);
 
-            if(pedidosFila.length===0) setContador(1);
+          // if(pedidosFila.length===0) setContador(1);
         }
     };
 
     return(
         <>
-        <div className="pedidos">
-            <h1>Fila</h1>
+        <div className="cabecalho">
+            <h1>Delivery de Pedidos</h1>
             <input type="text"
-            placeholder="Informe o Nome"
-            value={nome}
-            onChange={(e)=>setNome(e.target.value)} />
+            placeholder="Informe o produto"
+            value={produto}
+            onChange={(e)=>setProduto(e.target.value)} />
 
-            <button onClick={adicionarPedido}>Adicionar pedido</button>
+            <button onClick={adicionarPedido}>Adicionar produto</button>
             <button onClick={atenderPedido}>Atender pedido</button>
         </div>
-            {pedidos.map((pedido)=> (
-                <div key={pedido.id} className="pedido-item">
-                    <h2>Pedido {pedido.id}</h2>
-                    <p>Nome: {pedido.nome}</p>
-                    <p>Status: {pedido.atendido ? "Atendido" : "Não Atendido"}</p>
-                </div>
-            ))}
+        <div className="lista">
+            <h2>Pedidos em aberto</h2>
+            <div className="pedidos">
+                {pedidos.map((pedido)=> (
+                    <div key={pedido.id} className="pedido-item">
+                        <h2>Pedido {pedido.id}</h2>
+                        <p>produto: {pedido.produto}</p>
+                        <p>Status: {pedido.atendido ? "Atendido" : "Não Atendido"}</p>
+                    </div>
+                ))}
+            </div>
+            
+            <div className="pedidosAtendidos">
+                <h2>Pedidos finalizados</h2>
+                {pedidosAtendidos.map((pedidoAtendido)=> (
+                    <div key={pedidoAtendido.id} className="pedidoAtendido-item">
+                        <h2>Pedido {pedidoAtendido.id}</h2>
+                        <p>produto: {pedidoAtendido.produto}</p>
+                        <p>Status: {pedidoAtendido.atendido ? "Atendido" : "Não Atendido"}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+
         </>
     );
 }
