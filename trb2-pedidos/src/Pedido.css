@@ -7,8 +7,8 @@
     grid-template-rows: repeat(7, 0.2fr);
     justify-items: stretch;
     border: 1 px solid purple;
-    padding: 0.2em;
-    gap: 0.1em;
+    padding: 1.5em;
+    gap: 1em;
 }
 
 .pedidosAtendidos{
@@ -16,8 +16,18 @@
     grid-template-rows: repeat(7, 0.2fr);
     justify-items: stretch;
     border: 1 px solid purple;
-    padding: 0.2em;
-    gap: 0.1em;
+    padding: 1.5em;
+    gap: 1em;
 
 }
 
+.pedido-item,
+.pedidoAtendido-item {
+    background-color: #220222;
+    color: #fff; 
+    border-radius: 8px; /* Deixa as bordas arredondadas */
+    padding: 0.5em; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para efeito 3D */
+    text-align: center; 
+    border: 1px solid purple; 
+}

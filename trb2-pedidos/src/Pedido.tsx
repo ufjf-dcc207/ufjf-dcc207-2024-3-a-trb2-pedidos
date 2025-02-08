@@ -50,8 +50,9 @@ export default function Pedido(){
             <button onClick={atenderPedido}>Atender pedido</button>
         </div>
         <div className="lista">
-            <h2>Pedidos em aberto</h2>
+            
             <div className="pedidos">
+              <h2>Pedidos em aberto</h2>
                 {pedidos.map((pedido)=> (
                     <div key={pedido.id} className="pedido-item">
                         <h2>Pedido {pedido.id}</h2>
