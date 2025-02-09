@@ -1,21 +1,42 @@
+
+body {
+    margin: 5em;
+}
+
 .lista{
     display: flex;
+    gap: 10em;  /* Espaçamento entre pedidos aberto e pedidos finalizados */
 }
 
-.pedidos{
-    display: grid;
-    grid-template-rows: repeat(7, 0.2fr);
-    justify-items: stretch;
-    border: 1 px solid purple;
-    padding: 1.5em;
-    gap: 1em;
+input {
+   
+    margin-left: 1em;   /*espaço à esquerda da borda no input */
+    margin-right: 1em;  /*  espaço à direita do input ao lado do botao adicinar Produto */
+}
+button {
+    padding: 0.7em;
+    font-size: 1em;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 1em;   /* Adiciona um espaço à esquerda do botão */
+    margin-right: 1em;  /* Adiciona um espaço à direita do botão */
 }
 
+button:hover {
+    background-color: #5a2a8f;
+}
+
+
+.pedidos,
 .pedidosAtendidos{
     display: grid;
     grid-template-rows: repeat(7, 0.2fr);
     justify-items: stretch;
-    border: 1 px solid purple;
+    border: 1 solid purple;
     padding: 1.5em;
     gap: 1em;
 
@@ -25,9 +46,11 @@
 .pedidoAtendido-item {
     background-color: #220222;
     color: #fff; 
-    border-radius: 8px; /* Deixa as bordas arredondadas */
+    border-radius: 8px; 
     padding: 0.5em; 
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para efeito 3D */
     text-align: center; 
     border: 1px solid purple; 
+    
 }
+

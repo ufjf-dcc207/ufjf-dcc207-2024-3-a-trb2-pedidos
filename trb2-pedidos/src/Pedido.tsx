@@ -51,6 +51,7 @@ export default function Pedido(){
         </div>
         <div className="lista">
             
+            
             <div className="pedidos">
               <h2>Pedidos em aberto</h2>
                 {pedidos.map((pedido)=> (
