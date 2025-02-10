@@ -5,13 +5,13 @@ body {
 
 .lista{
     display: block;
-    gap: 2em;  /* Espaçamento entre pedidos aberto e pedidos finalizados */
+    gap: 2em;  
 }
 
 input {
-    margin-bottom: 5em; /* Espaço abaixo do input */
-    margin-left: 1em;   /*espaço à esquerda da borda no input */
-    margin-right: 4em;  /*  espaço à direita do input ao lado do botao adicinar Produto */
+    margin-bottom: 5em; 
+    margin-left: 1em;  
+    margin-right: 4em;  
 }
 button {
     padding: 0.7em;
@@ -22,8 +22,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 1em;   /* Adiciona um espaço à esquerda do botão */
-    margin-right: 1em;  /* Adiciona um espaço à direita do botão */
+    margin-left: 1em;   
+    margin-right: 1em;  
 }
 
 button:hover {
@@ -47,10 +47,10 @@ button:hover {
     color: #fff; 
     border-radius: 8px; 
     padding: 0.5em; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para efeito 3D */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
     text-align: center; 
     border: 1px solid purple; 
-    width: 200px;  /* Largura fixa para os itens */
+    width: 200px;  
     
 }
 
