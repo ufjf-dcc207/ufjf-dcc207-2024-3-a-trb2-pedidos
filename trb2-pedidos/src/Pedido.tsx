@@ -49,7 +49,7 @@ export default function Pedido(){
             <button onClick={adicionarPedido}>Adicionar produto</button>
             <button onClick={atenderPedido}>Atender pedido</button>
         </div>
-        <div className="lista">
+        <div className="fila">
             
             
             <div className="pedidos">
