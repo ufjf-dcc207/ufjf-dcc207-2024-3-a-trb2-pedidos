@@ -30,9 +30,9 @@ export default function Pedido(){
     const atenderPedido = () => {
         if (pedidos.length > 0) {
             const [pedidoAtendido, ...pedidosFila] = pedidos;
-            const pedidoAtendidoCopia = { ...pedidoAtendido, atendido: true }; // Cria uma cópia com a nova propriedade
-            setPedidosAtendidos([...pedidosAtendidos, pedidoAtendidoCopia]); // Adiciona a cópia na lista de atendidos
-            setPedidos(pedidosFila); // Atualiza a lista de pedidos
+            const pedidoAtendidoCopia = { ...pedidoAtendido, atendido: true }; 
+            setPedidosAtendidos([...pedidosAtendidos, pedidoAtendidoCopia]); 
+            setPedidos(pedidosFila);
         }
     
    // const atenderPedido = ()=>{
