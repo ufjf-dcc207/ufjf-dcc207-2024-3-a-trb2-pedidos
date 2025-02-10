@@ -34,16 +34,7 @@ export default function Pedido(){
             setPedidosAtendidos([...pedidosAtendidos, pedidoAtendidoCopia]); 
             setPedidos(pedidosFila);
         }
-    
-   // const atenderPedido = ()=>{
-     //   if(pedidos.length>0){
-       //     const [pedidoAtendido, ...pedidosFila] = pedidos; // Retira o primeiro pedido da fila
-         //  pedidoAtendido.atendido = true; // Marca o pedido como atendido
-          //  setPedidosAtendidos([...pedidosAtendidos,pedidoAtendido]); // Adiciona o pedido atendido na lista de pedidos atendidos
-           // setPedidos(pedidosFila); // Atualiza a lista de pedidos, removendo o pedido atendido
-
-          // if(pedidosFila.length===0) setContador(1);
-        };
+    };
     
 
     return(
